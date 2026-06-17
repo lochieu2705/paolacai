@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Páo Lá Cải</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Roboto',sans-serif;
+}
+
+body{
+background:#f3f3f3;
+color:#222;
+}
+
+.wrapper{
+width:1140px;
+margin:auto;
+}
+
+/* HEADER */
+
+.header{
+background:#fff;
+}
+
+.top-header{
+height:82px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.logo{
+font-size:54px;
+font-weight:700;
+color:#c40d00;
+line-height:1;
+}
+
+.logo span{
+color:#30b4c5;
+}
+
+.logo span{
+color:#b48a00;
+}
+
+
+.right-header{
+display:flex;
+align-items:center;
+gap:25px;
+font-size:14px;
+color:#666;
+}
+
+.user-icon{
+width:36px;
+height:36px;
+border:1px solid #ddd;
+border-radius:50%;
+}
+
+/* MENU */
+
+.menu{
+background:#27b2c5;
+height:56px;
+}
+
+.menu-inner{
+display:flex;
+align-items:center;
+height:100%;
+}
+
+.menu-links{
+display:flex;
+gap:35px;
+}
+
+.menu-links a{
+color:#fff;
+font-size:19px;
+font-weight:500;
+text-decoration:none;
+}
+
+.search{
+margin-left:auto;
+display:flex;
+align-items:center;
+}
+
+.search input{
+width:290px;
+height:38px;
+border:none;
+outline:none;
+padding:0 15px;
+background:#3abfd0;
+color:#fff;
+border-radius:4px 0 0 4px;
+}
+
+.search input::placeholder{
+color:#dff6f9;
+}
+
+.search button{
+height:38px;
+width:48px;
+border:none;
+background:#22a4b7;
+color:white;
+cursor:pointer;
+}
+
+.hamburger{
+margin-left:15px;
+font-size:28px;
+color:white;
+}
+
+/* CONTENT */
+
+.content{
+display:grid;
+grid-template-columns:740px 350px;
+gap:40px;
+margin-top:22px;
+}
+
+/* FEATURED */
+
+.featured{
+display:grid;
+grid-template-columns:1fr 1.5fr;
+gap:25px;
+align-items:start;
+}
+
+.featured-title{
+display:block;
+font-size:28px;
+font-weight:700;
+line-height:1.3;
+margin-bottom:12px;
+text-decoration:none;
+color:#111;
+}
+
+.featured-title:hover{
+color:#27b2c5;
+}
+
+.featured-desc{
+font-size:15px;
+color:#666;
+line-height:1.8;
+}
+
+.featured img{
+width:100%;
+height:365px;
+object-fit:cover;
+}
+
+/* SIDE NEWS */
+
+.side-news{
+background:#fff;
+padding:5px 0;
+}
+
+.side-item{
+padding:14px 0;
+border-bottom:1px solid #ececec;
+font-size:16px;
+line-height:1.5;
+cursor:pointer;
+}
+
+.side-item:hover{
+color:#ff6600;
+}
+
+/* SMALL NEWS */
+
+.small-news{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:22px;
+margin-top:22px;
+}
+
+.news-card img{
+width:100%;
+height:130px;
+object-fit:cover;
+}
+
+.news-card h3{
+font-size:16px;
+font-weight:500;
+margin-top:10px;
+line-height:1.4;
+}
+
+/* TAGS */
+
+.tags{
+margin-top:22px;
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+}
+
+.tag{
+background:#fff;
+border-radius:30px;
+padding:10px 18px;
+font-size:15px;
+border:1px solid #ececec;
+}
+
+/* RESPONSIVE */
+
+/* ======================
+   TABLET
+====================== */
+
+@media (max-width:1024px){
+
+.wrapper{
+width:95%;
+}
+
+.content{
+grid-template-columns:1fr;
+}
+
+.side-news{
+display:none;
+}
+
+.featured{
+grid-template-columns:1fr;
+}
+
+.featured img{
+height:300px;
+}
+
+.small-news{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+/* ======================
+   MOBILE
+====================== */
+
+@media (max-width:768px){
+
+.top-header{
+height:auto;
+padding:12px 0;
+flex-direction:column;
+gap:10px;
+}
+
+.logo{
+font-size:38px;
+text-align:center;
+}
+
+.right-header{
+gap:12px;
+font-size:13px;
+}
+
+.menu{
+height:auto;
+padding:10px 0;
+}
+
+.menu-inner{
+flex-direction:column;
+gap:12px;
+}
+
+.menu-links{
+width:100%;
+justify-content:center;
+gap:18px;
+flex-wrap:wrap;
+}
+
+.menu-links a{
+font-size:16px;
+}
+
+.search{
+width:100%;
+margin:0;
+}
+
+.search input{
+width:100%;
+}
+
+.search button{
+flex-shrink:0;
+}
+
+.hamburger{
+display:none;
+}
+
+.content{
+margin-top:15px;
+}
+
+.featured-title{
+font-size:24px;
+}
+
+.featured-desc{
+font-size:14px;
+}
+
+.featured img{
+height:220px;
+}
+
+.small-news{
+grid-template-columns:1fr;
+}
+
+.news-card img{
+height:190px;
+}
+
+.tags{
+justify-content:center;
+}
+
+.tag{
+font-size:14px;
+padding:8px 14px;
+}
+
+}
+
+@media (max-width:480px){
+
+.logo{
+font-size:30px;
+}
+
+.featured-title{
+font-size:21px;
+}
+
+.featured img{
+height:180px;
+}
+
+.news-card img{
+height:160px;
+}
+
+.menu-links{
+gap:12px;
+}
+
+.menu-links a{
+font-size:14px;
+}
+
+.search input{
+height:36px;
+}
+
+.search button{
+height:36px;
+width:44px;
+}
+
+}
+.article-page{
+display:none;
+background:#fff;
+padding:30px;
+margin-top:20px;
+border-radius:8px;
+}
+
+.article-page h1{
+font-size:38px;
+margin-bottom:20px;
+line-height:1.3;
+}
+
+.article-page p{
+font-size:18px;
+line-height:1.8;
+margin-bottom:18px;
+}
+
+.back-btn{
+display:inline-block;
+margin-bottom:20px;
+padding:10px 18px;
+background:#27b2c5;
+color:#fff;
+text-decoration:none;
+border-radius:5px;
+}
+
+.article-page{
+display:none;
+background:#fff;
+padding:30px 0 60px;
+}
+
+.article-container{
+max-width:760px;
+margin:auto;
+padding:0 15px;
+}
+
+.article-category{
+text-align:center;
+font-size:13px;
+letter-spacing:4px;
+color:#666;
+margin-bottom:25px;
+}
+
+.article-title{
+font-size:54px;
+font-weight:700;
+line-height:1.25;
+text-align:center;
+margin-bottom:25px;
+font-family:Georgia,serif;
+}
+
+.article-author{
+text-align:center;
+font-size:16px;
+font-weight:500;
+color:#333;
+margin-bottom:20px;
+}
+
+.article-author span{
+color:#888;
+font-size:14px;
+}
+
+.article-line{
+width:180px;
+margin:0 auto 30px;
+border:none;
+border-top:1px solid #000;
+}
+
+.article-sapo{
+font-size:24px;
+font-weight:500;
+line-height:1.7;
+margin-bottom:30px;
+color:#222;
+}
+
+.article-image{
+width:100%;
+height:auto;
+margin:25px 0;
+display:block;
+border-radius:8px;
+}
+
+.article-subtitle{
+font-size:32px;
+color:#d60000;
+margin:30px 0 15px;
+font-weight:700;
+}
+
+.article-container p{
+font-size:22px;
+line-height:1.9;
+margin-bottom:22px;
+color:#222;
+}
+
+.back-btn{
+display:inline-block;
+margin-bottom:40px;
+padding:10px 18px;
+background:#27b2c5;
+color:#fff;
+text-decoration:none;
+border-radius:5px;
+}
+/* ======================
+   ARTICLE RESPONSIVE
+====================== */
+
+@media (max-width:768px){
+
+.article-container{
+max-width:100%;
+padding:0 15px;
+}
+
+.article-title{
+font-size:34px;
+line-height:1.3;
+margin-bottom:20px;
+}
+
+.article-sapo{
+font-size:18px;
+line-height:1.7;
+}
+
+.article-subtitle{
+font-size:24px;
+}
+
+.article-container p{
+font-size:18px;
+line-height:1.8;
+}
+
+.article-author{
+font-size:14px;
+}
+
+.back-btn{
+font-size:14px;
+padding:8px 14px;
+}
+
+}
+
+@media (max-width:480px){
+
+.article-title{
+font-size:28px;
+line-height:1.3;
+}
+
+.article-sapo{
+font-size:17px;
+}
+
+.article-subtitle{
+font-size:22px;
+}
+
+.article-container p{
+font-size:17px;
+}
+
+.article-category{
+font-size:12px;
+letter-spacing:2px;
+}
+
+.article-line{
+width:120px;
+}
+
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+
+<div class="wrapper top-header">
+
+    <div class="logo">
+        PÁO<span>LÁ</span>CẢI
+        </div>
+<div class="right-header">
+    <span id="weather">Đang tải...</span>
+
+    <script>
+    async function loadWeather() {
+        try {
+            const res = await fetch(
+                "https://api.open-meteo.com/v1/forecast?latitude=21.85&longitude=106.76&current=temperature_2m"
+            );
+    
+            const data = await res.json();
+    
+            document.getElementById("weather").innerHTML =
+                `☁ Lạng Sơn ${Math.round(data.current.temperature_2m)}°C`;
+        }
+        catch(e){
+            document.getElementById("weather").innerHTML =
+                "☁ Lạng Sơn --°C";
+        }
+    }
+    
+    loadWeather();
+    setInterval(loadWeather, 300000);
+    </script>
+<div class="user-icon"></div>
+▥
+</div>
+
+</div>
+
+<div class="menu">
+
+<div class="wrapper menu-inner">
+
+<div class="menu-links">
+<a href="#">NÓNG</a>
+<a href="#">MỚI</a>
+<a href="#">VIDEO</a>
+<a href="#">CHỦ ĐỀ</a>
+</div>
+
+<div class="search">
+<input placeholder="Nhập nội dung tìm kiếm">
+<button>🔍</button>
+</div>
+
+<div class="hamburger">☰</div>
+
+</div>
+
+</div>
+
+</header>
+
+<div class="wrapper content">
+
+<div>
+
+<div class="featured">
+
+<div>
+
+    <a href="#" class="featured-title" onclick="openArticle();return false;">
+Chuyên gia Lộc Hoàng Minh Hiệu công bố nghiên cứu về tác hại của việc đeo kính
+</a>
+        
+        <div class="featured-desc">
+        Nghiên cứu mới của chuyên gia Lộc Hoàng Minh Hiệu nhắc nhở về việc đeo kính của một số bạn trẻ hiện nay
+        </div>
+
+</div>
+
+<a href="https://ibb.co/C397rthw"><img src="https://i.ibb.co/9k4TMvsp/photo-2026-06-17-15-48-41.jpg" alt="photo-2026-06-17-15-48-41" border="0" /></a>
+
+</div>
+
+<div class="small-news">
+
+<div class="news-card">
+<img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=800">
+<h3>Bộ Công an nêu thủ đoạn lừa đảo của mô hình hợp đồng ký nghỉ</h3>
+</div>
+
+<div class="news-card">
+<img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=800">
+<h3>Nhận định Anh vs Croatia, khởi đầu không ồn ào</h3>
+</div>
+
+<div class="news-card">
+<img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800">
+<h3>Apple tăng thời gian hỗ trợ iPhone 11 lên 8 năm</h3>
+</div>
+
+</div>
+
+<div class="tags">
+<div class="tag"># World Cup 2026</div>
+<div class="tag"># Tết Đoan Ngọ</div>
+<div class="tag"># Kỳ thi tốt nghiệp THPT</div>
+<div class="tag"># Mỹ - Iran</div>
+</div>
+
+</div>
+
+<div class="side-news">
+
+<div class="side-item">
+Tổng Bí thư, Chủ tịch nước Tô Lâm dự Đại hội đại biểu toàn quốc Hội Cựu chiến binh Việt Nam
+</div>
+
+<div class="side-item">
+Con vật có hàm khỏe, chuyên ăn thịt bất ngờ xuất hiện tại nhà dân
+</div>
+
+<div class="side-item">
+Cục Thuế: Sẽ nghiên cứu đề xuất hộ kinh doanh doanh thu dưới 5 tỷ đồng được nộp thuế khoán
+</div>
+
+<div class="side-item">
+Chi hơn 2.000 USD săn vé World Cup 2026
+</div>
+
+<div class="side-item">
+Phường Thanh Xuân lắng nghe cử tri
+</div>
+
+<div class="side-item">
+Những sáng tạo giúp tiết kiệm hàng triệu đồng
+</div>
+
+</div>
+
+</div>
+<script>
+
+    function openArticle(){
+    
+    document.querySelector(".content").style.display="none";
+    
+    document.getElementById("articlePage").style.display="block";
+    
+    window.scrollTo({
+    top:0,
+    behavior:"smooth"
+    });
+    
+    }
+    
+    function closeArticle(){
+    
+    document.getElementById("articlePage").style.display="none";
+    
+    document.querySelector(".content").style.display="grid";
+    
+    window.scrollTo({
+    top:0,
+    behavior:"smooth"
+    });
+    
+    }
+    
+    
+    </script>
+    <div id="articlePage" class="article-page">
+
+        <div class="article-container">
+        
+        <a href="#" class="back-btn" onclick="closeArticle();return false;">
+        ← Quay lại trang chủ
+        </a>
+        
+        <div class="article-category">
+        NGHIÊN CỨU
+        </div>
+        
+        <h1 class="article-title">
+        Chuyên gia Lộc Hoàng Minh Hiệu công bố nghiên cứu về tác hại của việc đeo kính
+        </h1>
+        
+        <div class="article-author">
+        👤 Lộc Hoàng Minh Hiệu
+        <span> • 17/06/2026</span>
+        </div>
+        
+        <hr class="article-line">
+        
+        <div class="article-sapo">
+        Nghiên cứu mới chỉ ra rằng việc đeo kính không phù hợp với tình trạng thị lực
+        có thể gây ra nhiều ảnh hưởng đến sức khỏe mắt và hiệu suất học tập, làm việc.
+        </div>
+        
+        <img
+        class="article-image"
+        src="https://i.ibb.co/9k4TMvsp/photo-2026-06-17-15-48-41.jpg"
+        alt=""
+        >
+        
+        <h2 class="article-subtitle">
+        Những tác động đáng chú ý
+        </h2>
+        
+        <p>
+        LẠNG SƠN - Chuyên gia Lộc Hoàng Minh Hiệu vừa công bố kết quả nghiên cứu
+        liên quan đến thói quen sử dụng kính của giới trẻ hiện nay.
+        </p>
+        
+        <p>
+        Theo báo cáo, một bộ phận người dùng đang đeo kính sai độ hoặc tiếp tục sử
+        dụng kính trong thời gian dài mà không thực hiện kiểm tra thị lực định kỳ.
+        Điều này có thể gây ra hiện tượng mỏi mắt, đau đầu, giảm khả năng tập trung
+        và ảnh hưởng đến chất lượng cuộc sống.
+        </p>
+        
+        <p>
+        Nghiên cứu cũng cho thấy thời gian tiếp xúc màn hình điện tử ngày càng tăng
+        đang khiến tình trạng khô mắt xuất hiện phổ biến hơn ở nhóm học sinh,
+        sinh viên và nhân viên văn phòng.
+        </p>
+        
+        <h2 class="article-subtitle">
+        Khuyến nghị từ chuyên gia
+        </h2>
+        
+        <p>
+        Ông Hiệu khuyến nghị người dân nên khám mắt định kỳ từ 6 đến 12 tháng một lần,
+        đồng thời chỉ sử dụng kính được đo và cắt đúng theo tình trạng thị lực thực tế.
+        </p>
+        
+        <p>
+        Ngoài ra, người dùng nên áp dụng quy tắc 20-20-20:
+        sau mỗi 20 phút nhìn màn hình hãy nhìn xa khoảng 20 feet
+        (khoảng 6 mét) trong ít nhất 20 giây để giúp mắt được thư giãn.
+        </p>
+        
+        <p>
+        Các chuyên gia cho rằng việc chăm sóc thị lực từ sớm sẽ góp phần hạn chế nguy
+        cơ suy giảm thị lực và nâng cao chất lượng học tập, làm việc trong thời đại số.
+        </p>
+        
+        </div>
+        
+        </div>
+
+            
+            </script>
+</body>
+</html>
