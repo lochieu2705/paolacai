@@ -1,0 +1,691 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0081)http://dangkyhoc.tueba.edu.vn/dhkt/(S(ecfhhlnrfmw1cauogajk23tl))/StudentMark.aspx -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>.: Bảng điểm :.</title>
+		<meta content="Microsoft Visual Studio .NET 7.1" name="GENERATOR">
+		<meta content="C#" name="CODE_LANGUAGE">
+		<meta content="JavaScript" name="vs_defaultClientScript">
+		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+		<meta http-equiv="Page-Exit" content="progid:DXImageTransform.Microsoft.Fade(duration=.5)">
+		<link rel="stylesheet" type="text/css" href="./__ Bảng điểm _._files/bootstrap.min.css"> <!-- them -->
+		<link href="./__ Bảng điểm _._files/Default.css" type="text/css" rel="stylesheet">
+		<script src="./__ Bảng điểm _._files/Default.js.tải xuống" type="text/javascript"></script>
+		<script src="./__ Bảng điểm _._files/util.js.tải xuống" type="text/javascript"></script>
+		<script language="javascript" src="./__ Bảng điểm _._files/dynCalendar.js.tải xuống" type="text/javascript"></script>
+		<script>
+			function PageLoad(){
+				var tbl = document.getElementById("tblStudentMark");
+				if(tbl.offsetWidth < document.getElementById("divData").offsetWidth)
+					tbl.style.width = "100%";//document.getElementById("divData").offsetWidth - 10;
+			}
+		</script>
+	<style>.--savior-overlay-transform-reset {
+  transform: none !important;
+}
+.--savior-overlay-z-index-top {
+  z-index: 2147483643 !important;
+}
+.--savior-overlay-position-relative {
+  position: relative;
+}
+.--savior-overlay-position-static {
+  position: static !important;
+}
+.--savior-overlay-overflow-hidden {
+  overflow: hidden !important;
+}
+.--savior-overlay-overflow-x-visible {
+  overflow-x: visible !important;
+}
+.--savior-overlay-overflow-y-visible {
+  overflow-y: visible !important;
+}
+.--savior-overlay-z-index-reset {
+  z-index: auto !important;
+}
+.--savior-overlay-display-none {
+  display: none !important;
+}
+.--savior-overlay-clearfix {
+  clear: both;
+}
+.--savior-overlay-reset-filter {
+  filter: none !important;
+  backdrop-filter: none !important;
+}
+.--savior-tooltip-host {
+  z-index: 9999;
+  position: absolute;
+  top: 0;
+}
+/*Override css styles for Twitch.tv*/
+main.--savior-overlay-z-index-reset {
+  z-index: auto !important;
+}
+.modal__backdrop.--savior-overlay-z-index-reset {
+  position: static !important;
+}
+main.--savior-overlay-z-index-top {
+  z-index: auto !important;
+}
+main.--savior-overlay-z-index-top .channel-root__player-container + div,
+main.--savior-overlay-z-index-top .video-player-hosting-ui__container + div {
+  opacity: 0.1;
+}
+/*Dirty hack for facebook big video page e.g: https://www.facebook.com/abc/videos/...*/
+.--savior-backdrop {
+  position: fixed !important;
+  z-index: 2147483642 !important;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw !important;
+  background-color: rgba(0,0,0,0.9);
+}
+.--savior-overlay-twitter-video-player {
+  position: fixed;
+  width: 80%;
+  height: 80%;
+  top: 10%;
+  left: 10%;
+}
+.--savior-overlay-z-index-reset [class*="DivSideNavContainer"],
+.--savior-overlay-z-index-reset [class*="DivHeaderContainer"],
+.--savior-overlay-z-index-reset [class*="DivBottomContainer"],
+.--savior-overlay-z-index-reset [class*="DivCategoryListWrapper"],
+.--savior-overlay-z-index-reset [data-testid="sidebarColumn"],
+.--savior-overlay-z-index-reset header[role="banner"],
+.--savior-overlay-z-index-reset [data-testid="cellInnerDiv"]:not(.--savior-overlay-z-index-reset),
+.--savior-overlay-z-index-reset [aria-label="Home timeline"]>div:first-child,
+.--savior-overlay-z-index-reset [aria-label="Home timeline"]>div:nth-child(3) {
+  z-index: -1 !important;
+}
+.--savior-overlay-z-index-reset [data-testid="cellInnerDiv"] .--savior-backdrop+div {
+  z-index: 2147483643 !important;
+}
+.--savior-overlay-z-index-reset [data-testid="primaryColumn"]>[aria-label="Home timeline"] {
+  z-index: 0 !important;
+}
+.--savior-overlay-z-index-reset#mtLayer,
+.--savior-overlay-z-index-reset.media-layer {
+  z-index: 3000 !important;
+}
+.--savior-overlay-position-relative [class*="SecBar_secBar_"],
+.--savior-overlay-position-relative .woo-box-flex [class*="Frame_top_"] {
+  z-index: 0 !important;
+}
+.--savior-overlay-position-relative .vue-recycle-scroller__item-view:not(.--savior-overlay-z-index-reset),
+.--savior-overlay-position-relative .woo-panel-main[class*="BackTop_main_"],
+.--savior-overlay-position-relative [class*="Main_side_"] {
+  z-index: -1 !important;
+}
+/* Fix conflict css with zingmp3 */
+.zm-video-modal.--savior-overlay-z-index-reset {
+  position: absolute;
+}
+/* Dirty hack for xvideos99 */
+#page #main.--savior-overlay-z-index-reset {
+  z-index: auto !important;
+}
+/* Overlay for ok.ru */
+#vp_w.--savior-overlay-z-index-reset.media-layer.media-layer__video {
+  overflow-y: hidden;
+  z-index: 2147483643 !important;
+}
+/* Fix missing controller for tv.naver.com */
+.--savior-overlay-z-index-top.rmc_controller,
+.--savior-overlay-z-index-top.rmc_setting_intro,
+.--savior-overlay-z-index-top.rmc_highlight,
+.--savior-overlay-z-index-top.rmc_control_settings {
+  z-index: 2147483644 !important;
+}
+/* Dirty hack for douyi.com */
+.swiper-wrapper.--savior-overlay-z-index-reset .swiper-slide:not(.swiper-slide-active),
+.swiper-wrapper.--savior-overlay-transform-reset .swiper-slide:not(.swiper-slide-active) {
+  display: none;
+}
+.videoWrap + div > div {
+  pointer-events: unset;
+}
+/* Dirty hack for fpt.ai */
+.mfp-wrap.--savior-overlay-z-index-top {
+  position: relative;
+}
+.mfp-wrap.--savior-overlay-z-index-top .mfp-close {
+  display: none;
+}
+.mfp-wrap.--savior-overlay-z-index-top .mfp-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+section.--savior-overlay-z-index-reset>main[role="main"].--savior-overlay-z-index-reset + nav {
+  z-index: -1 !important;
+}
+section.--savior-overlay-z-index-reset>main[role="main"].--savior-overlay-z-index-reset section.--savior-overlay-z-index-reset div.--savior-overlay-z-index-reset ~ div {
+  position: relative;
+}
+.watching-movie #video-player.--savior-overlay-z-index-top {
+  z-index: 2147483644 !important;
+}
+div[class^="tiktok"].--savior-overlay-z-index-reset {
+  z-index: 2147483644 !important;
+}
+.--savior-lightoff-fix section:not(:has([class*="--savior-overlay-"])),
+.--savior-lightoff-fix section.section_video ~ section {
+  z-index: -1;
+  position: relative;
+}
+.--savior-lightoff-fix header,
+.--savior-lightoff-fix footer,
+.--savior-lightoff-fix .top-header,
+.--savior-lightoff-fix .swiper-container,
+.--savior-lightoff-fix #to_top,
+.--savior-lightoff-fix #button-adblock {
+  z-index: -1 !important;
+}
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+</style></head>
+	<body bgproperties="fixed" leftmargin="5" background="./__ Bảng điểm _._files/bamboo.gif" topmargin="0" onload="PageLoad();" rightmargin="5">
+		<style>			
+		.input_text { WIDTH: 30% }			
+		.label { FONT-SIZE: 12px; FLOAT: left; TEXT-ALIGN: left; MARGIN-RIGHT: 10px }			
+		LEGEND { FONT-SIZE: 15px; FONT-WEIGHT: bolder; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; MARGIN: 5px; PADDING-RIGHT: 5px }			
+		TABLE { MARGIN: 10px auto }			
+		</style>
+		<form method="post" action="http://dangkyhoc.tueba.edu.vn/dhkt/(S(ecfhhlnrfmw1cauogajk23tl))/StudentMark.aspx" id="Form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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bWFnZXMvcHJpbnQucG5nIiBib3JkZXI9IjAiPjwvZGl2PjxkaXYgc3R5bGU9IkZMT0FUOmxlZnQ7UEFERElORy1UT1A6NnB4Ij5QcmludCB0aGlzIHBhZ2U8L2Rpdj48L2E+PGEgaHJlZj0ibWFpbHRvOj9zdWJqZWN0PUluZm9ybWF0aW9uIHN5c3RlbSBJVSZhbXA7Ym9keT1odHRwOi8vZGFuZ2t5aG9jLnR1ZWJhLmVkdS52bi9kaGt0L1N0dWRlbnRNYXJrLmFzcHgiPjxkaXYgc3R5bGU9IkZMT0FUOmxlZnQiPjxpbWcgc3JjPSIvZGhrdC9pbWFnZXMvc2VuZGVtYWlsLnBuZyIgIGJvcmRlcj0iMCI+PC9kaXY+PGRpdiBzdHlsZT0iRkxPQVQ6bGVmdDtQQURESU5HLVRPUDo2cHgiPkVtYWlsIHRoaXMgcGFnZTwvZGl2PjwvYT48YSBocmVmPSIjIiBvbmNsaWNrPSJqYXZhc2NyaXB0OmFkZGZhdigpIj48ZGl2IHN0eWxlPSJGTE9BVDpsZWZ0Ij48aW1nIHNyYz0iL2Roa3QvaW1hZ2VzL2FkZHRvZmF2b3JpdGVzLnBuZyIgIGJvcmRlcj0iMCI+PC9kaXY+PGRpdiBzdHlsZT0iRkxPQVQ6bGVmdDtQQURESU5HLVRPUDo2cHgiPkFkZCB0byBmYXZvcml0ZXM8L2Rpdj48L2E+ZGRkND4PC6BCDleRQub5X2M4ierDDnvs4NhRoy0UElvEi14=">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['Form1'];
+if (!theForm) {
+    theForm = document.Form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdABqqoQCCY8/gUi9w3oWB7iHHb8csnTIorMPSfpUKU79Fa8zr1tijm/dVbgMI0MJ/5MhxnSw+auWTZ9Z5f4lQt6BhRJX1X6pFna9t/HXmXSR7Bx1v4rFMsOsPLazQBhw3uU/8NpSLPRO3nldgsLGSmpvMhvbRLf0w8iWtX8wHSHJ0brUJL1Il/V1OdCN5MkUmkDPYnFNl41UV9HKJeWsS9/823DKCZZokknP9wHTNU1D0FjhMMlchdV4d0bJp8C1OZ3T5ljy6sId8ZsUnenDzQynqKZ5ox1rXQp31gGj+veKLgJ6mHymQhXKAcZuZ7Yen9wmYJM6MSyR1zmAWEBt74gDQ0roAvSTIg9FO5GQW702oTZEM+9ox3TmHDP+2/G28gGjoZqfflpP380oHRJn2YjWSJXYOwqlNEU/cpSChKJvPrf403r45q+YKS5fXImZKb+XY/5ORXB5DJhpcQOdivkm2uudZ2xu9TcqLpAVZqXpCt3DMYv/zgs/meZjhaGPqLRsxLbX5+Fh1tfseMY5FrBAyql02kqS3C2QVRhLvUPMa/hVzXPvLiwQwtsV2D76nadR4qEXicxP9OrGL393qsHMP">
+</div>
+			
+<style>
+	.notify { BORDER-BOTTOM: #336699 1px solid; POSITION: fixed; MIN-WIDTH: 300px; BORDER-LEFT: #336699 1px solid; PADDING-BOTTOM: 8px; BACKGROUND-COLOR: #ffd700; MIN-HEIGHT: 100px; PADDING-LEFT: 8px; BOTTOM: 10px; PADDING-RIGHT: 8px; COLOR: red; BORDER-TOP: #336699 1px solid; RIGHT: 10px; BORDER-RIGHT: #336699 1px solid; PADDING-TOP: 8px; z-index:99999 }
+	.notifimg { POSITION: fixed; BOTTOM: 10px; RIGHT: 10px; z-index:99999 }
+</style>
+
+<div id="headerright">
+	<div id="header">
+		<div style="POSITION: absolute;FONT-FAMILY: -webkit-body;COLOR: white;FONT-SIZE: 18px;TOP: 32px;FONT-WEIGHT: bold;LEFT: 8px">
+			<span id="PageHeader1_lblWebtitle">Trường Đại học Kinh tế &amp; Quản trị kinh doanh Thái Nguyên</span></div>
+		<span id="navbar"><a href="http://dangkyhoc.tueba.edu.vn/dhkt/Home.aspx">Home page</a> |
+			<a id="PageHeader1_SignOut_ibnLogout" href="javascript:__doPostBack(&#39;PageHeader1$SignOut$ibnLogout&#39;,&#39;&#39;)" style="color:White;">Exit</a>
+
+			| <a href="http://dangkyhoc.tueba.edu.vn/dhkt/(S(ecfhhlnrfmw1cauogajk23tl))/support/default.aspx" target="_blank">Question and Answer</a> | <a href="http://dangkyhoc.tueba.edu.vn/CMCSoft.IU.Web.Info/WebHelp/NewProject1.htm" target="_blank">
+				Help</a>
+			<select name="PageHeader1$drpNgonNgu" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;PageHeader1$drpNgonNgu\&#39;,\&#39;\&#39;)&#39;, 0)" id="PageHeader1_drpNgonNgu" style="width:50px;Z-INDEX: 0">
+	<option selected="selected" value="C4D3AB1AC83E4566ACAAF0AFF1EDC78A">VN</option>
+	<option value="CBF0F143A7AB4DE39EDFE62F35F6F029">VN</option>
+
+</select>
+		</span>
+		<div id="box_size"><!--
+			<a href="javascript:decreaseFontSize();">
+				<h4 id="decreaseFontSize"></h4>
+			</a><a href="javascript:increaseFontSize();">
+				<h4 id="increaseFontSize"></h4>
+			</a>
+		--><span id="ur" style="FONT-SIZE: 14px; FONT-WEIGHT: bold"></span></div>
+		<div id="box_user">
+			<div style="WIDTH: 5px; DISPLAY: none; FLOAT: left; HEIGHT: 40px; PADDING-TOP: 2px">
+				<img id="PageHeader1_imgUser" src="./__ Bảng điểm _._files/UserInfo.gif" style="border-width:0px;DISPLAY: block; FLOAT: left"></div>
+			<div id="PageHeader1_Panel1" style="width:400px;TEXT-ALIGN: right; MARGIN-TOP: 2px">
+	
+				<p>
+					<span id="PageHeader1_lblUserFullName" style="color:Blue;font-size:10px;font-weight:bold;">Tô Đỗ Hoàng Sơn(DTE2555106050127)</span>
+					<span id="PageHeader1_lblRoleTitle">Role:</span>
+					<span id="PageHeader1_lblUserRole" style="color:Blue;font-size:10px;">Sinh viên</span>
+					
+					<a id="PageHeader1_lbNewmessage" href="javascript:__doPostBack(&#39;PageHeader1$lbNewmessage&#39;,&#39;&#39;)" style="color:Blue;background-color:Transparent;FONT-SIZE: 10px">Message box</a></p>
+			
+</div></div>
+		<div id="datetime" style="DISPLAY: none">[
+			<span id="PageHeader1_lblDatetime" style="font-weight:bold;">Datetime</span>]</div>
+		<div id="navigator">
+			<span id="PageHeader1_lblNavi"> <span style="font-size:10px">&gt;</span> <a href="http://dangkyhoc.tueba.edu.vn/dhkt/StudentMark.aspx">Tra cứu điểm</a></span></div>
+	</div>
+</div>
+<input name="PageHeader1$hidisNotify" type="hidden" id="PageHeader1_hidisNotify" value="0">
+<input name="PageHeader1$hidValueNotify" type="hidden" id="PageHeader1_hidValueNotify">
+<div class="notify" id="notify" style="DISPLAY:none">
+</div>
+<img class="notifimg" id="notifimg" src="./__ Bảng điểm _._files/new_icon.gif" style="DISPLAY:none">
+<script type="text/javascript">
+			checkNotify();
+			function checkNotify()
+			{
+				var isNotify = "0";
+				isNotify = document.getElementById("PageHeader1_hidisNotify").value;
+				if (isNotify=="1")
+				{						
+					try {
+						//viet ham kiem tra
+						if(document.getElementById("PageHeader1_hidValueNotify") != undefined)
+						{
+							var hidValue = document.getElementById("PageHeader1_hidValueNotify").value;
+							if (hidValue == null)
+							{
+								hidValue = "";
+							}				
+							document.getElementById("notify").style.display = "";
+							document.getElementById("notifimg").style.display = "";
+							document.getElementById("notify").innerHTML = hidValue;
+						}
+					}
+					catch(err) {
+						document.getElementById("demo").innerHTML = err.message;
+					}
+					
+				}
+			}
+</script>
+
+			<script src="./__ Bảng điểm _._files/jquery-1.9.1.js.tải xuống"></script> <!-- them -->
+			<script src="./__ Bảng điểm _._files/bootstrap.min.js.tải xuống"></script> <!-- them -->
+			<link rel="stylesheet" type="text/css" href="./__ Bảng điểm _._files/bootstrap-multiselect.css"> <!-- them -->
+			<script src="./__ Bảng điểm _._files/bootstrap-multiselect.js.tải xuống"></script> <!-- them -->
+			<script type="text/javascript">			
+			 jQuery(function () {				
+				jQuery('[id*=drpSemester]').multiselect({
+					includeSelectAllOption: true
+				});				
+			});						
+			</script> <!-- them -->
+			
+			
+			<table id="Table3" cellspacing="0" cellpadding="0" width="100%" border="0">
+				<tbody><tr>
+					<td valign="top" width="90%" height="100%">
+						<table id="Table9" height="100%" cellspacing="0" cellpadding="0" width="100%">
+							<tbody><tr>
+								<td style="FILTER: progid: DXImageTransform.Microsoft.Gradient(startColorStr=&#39;#0a6cce&#39;, endColorStr=&#39;#ffffff&#39;, gradientType=&#39;1&#39;)" align="center">
+									
+
+								</td>
+							</tr>
+						</tbody></table>
+					</td>
+				</tr>
+			</tbody></table>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2"><label class="form-control-lable">Mã sinh viên:</label></div>
+					<div class="col-md-2"><span id="lblStudentCode" class="form-control-lable-value">DTE2555106050127</span></div>
+					<div class="col-md-1"><label class="form-control-lable">Họ tên:</label></div>
+					<div class="col-md-3"><span id="lblStudentName" class="form-control-lable-value">Tô Đỗ Hoàng Sơn</span></div>
+					<div class="col-md-2"><label class="form-control-lable">Trạng thái:</label></div>
+					<div class="col-md-2"><span id="lblstudentstatus" class="form-control-lable-value">ĐANG HỌC</span></div>
+				</div>
+				<div class="row">
+					<div class="col-md-2"><label class="form-control-lable">Khóa:</label></div>
+					<div class="col-md-2"><span id="lblAy" class="form-control-lable-value">K22</span></div>
+					<div class="col-md-1"><label class="form-control-lable">Ngành:</label></div>
+					<div class="col-md-3"><select name="drpField" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;drpField\&#39;,\&#39;\&#39;)&#39;, 0)" id="drpField" class="form-control">
+	<option selected="selected" value="C70F8DE51D0C4792961002F834627526">Logistics và quản lý chuỗi cung ứng</option>
+
+</select></div>
+					<div class="col-md-2"><label class="form-control-lable">Lớp:</label></div>
+					<div class="col-md-2"><span id="lblAdminClass" class="form-control-lable-value">K22 - Logistics và quản lý chuỗi cung ứng 3</span></div>
+				</div>
+				<div class="row">
+					<div class="col-md-2"><label class="form-control-lable">Chọn học kỳ:</label></div>
+					<div class="col-md-2"><select name="drpHK" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;drpHK\&#39;,\&#39;\&#39;)&#39;, 0)" id="drpHK" class="form-control">
+	<option value="">---</option>
+	<option value="2025_2026_1">2025_2026_1</option>
+	<option selected="selected" value="2025_2026_2">2025_2026_2</option>
+
+</select></div>
+					<div class="col-md-1"><label class="form-control-lable">Lọc:</label></div>
+					<div class="col-md-7"><select name="drpFilter" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;drpFilter\&#39;,\&#39;\&#39;)&#39;, 0)" id="drpFilter" class="form-control" style="font-weight:bold;">
+	<option selected="selected" value="1">Xem những học phần đã có điểm và nằm trong chương trình học</option>
+	<option value="2">Xem những học phần đã có điểm nhưng chưa ĐẠT và nằm trong chương trình học</option>
+	<option value="3">Xem những học phần đã có điểm và ĐẠT và nằm trong chương trình học</option>
+	<option value="4">Xem những học phần nằm trong chương trình học nhưng chưa học</option>
+	<option value="5">Tất cả các học phần đã có điểm</option>
+	<option value="6">Xem các học phần nằm trong CTĐT và được công nhận là môn tính điểm xét tốt nghiệp</option>
+
+</select></div>
+				</div>
+				<input name="hidSymbolMark" type="hidden" id="hidSymbolMark" value="1"> <input name="hidFieldId" type="hidden" id="hidFieldId" value="C70F8DE51D0C4792961002F834627526">
+				<input name="hidFieldName" type="hidden" id="hidFieldName" value="Logistics và quản lý chuỗi cung ứng"> <input name="hidStudentId" type="hidden" id="hidStudentId" value="2fdec0815ea9406ba66e365d39255e32">
+				<div class="row">
+					<div class="col-md-12"><label class="form-control-lable-value">BẢNG ĐIỂM TRUNG BÌNH HỌC 
+							TẬP NĂM HỌC, HỌC KỲ, TOÀN KHÓA:</label></div>
+				</div>
+			</div>
+			<table class="tableborder" id="tblSumMark" cellspacing="0" cellpadding="0" width="100%" border="0">
+				<tbody>
+					<tr>
+						<td>
+							<table cellspacing="0" cellpadding="0" rules="all" id="grdResult" style="border-color:RosyBrown;border-width:1px;border-style:Solid;width:100%;border-collapse:collapse;Z-INDEX: 0">
+	<tbody><tr align="center" style="color:White;height:20px;">
+		<td class="cssListHeader" align="center" style="width:12%;">Năm học</td><td class="cssListHeader" align="center" style="width:6%;">Học kỳ</td><td class="cssListHeader" align="center" style="width:8%;">TBTL Hệ 10 N1</td><td class="cssListHeader" align="center" style="width:8%;">TBTL Hệ 10 N2</td><td class="cssListHeader" align="center" style="width:8%;">TBTL Hệ4 N1</td><td class="cssListHeader" align="center" style="width:8%;">TBTL Hệ4 N2</td><td class="cssListHeader" align="center" style="width:8%;">Số TCTL N1</td><td class="cssListHeader" align="center" style="width:8%;">Số TCTL N2</td><td class="cssListHeader" align="center" style="width:8%;">TBC Hệ 10 N1</td><td class="cssListHeader" align="center" style="width:8%;">TBC Hệ 10 N2</td><td class="cssListHeader" align="center" style="width:8%;">TBC Hệ4 N1</td><td class="cssListHeader" align="center" style="width:8%;">TBC Hệ4 N2</td><td class="cssListHeader" align="center" style="width:8%;">Số TC N1</td><td class="cssListHeader" align="center" style="width:8%;">Số TC N2</td>
+	</tr><tr class="cssListItem" style="height:20px;">
+		<td align="center">2025_2026</td><td align="center">1</td><td align="center">0</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">&nbsp;</td><td align="center">
+											<span id="grdResult_lblDTBCN1_0">1.64</span>
+										</td><td align="center">
+											<span id="grdResult_lblDTBCN2_0"></span>
+										</td><td align="center">
+											<span id="grdResult_lblDTBC4N1_0">0</span>
+										</td><td align="center">
+											<span id="grdResult_lblDTBC4N2_0"></span>
+										</td><td align="center">
+											<span id="grdResult_lblSoTCN1_0">15</span>
+										</td><td align="center">
+											<span id="grdResult_lblSoTCN2_0"></span>
+										</td>
+	</tr><tr class="cssListAlternativeItem" style="height:20px;">
+		<td align="center">2025_2026</td><td align="center">2</td><td align="center">0</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">&nbsp;</td><td align="center">
+											<span id="grdResult_lblDTBCN1_1">0.09</span>
+										</td><td align="center">
+											<span id="grdResult_lblDTBCN2_1"></span>
+										</td><td align="center">
+											<span id="grdResult_lblDTBC4N1_1">0</span>
+										</td><td align="center">
+											<span id="grdResult_lblDTBC4N2_1"></span>
+										</td><td align="center">
+											<span id="grdResult_lblSoTCN1_1">17</span>
+										</td><td align="center">
+											<span id="grdResult_lblSoTCN2_1"></span>
+										</td>
+	</tr><tr class="cssListItem" style="height:20px;">
+		<td align="center">2025_2026</td><td align="center">Cả Năm</td><td align="center">0</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">&nbsp;</td><td align="center">
+											<span id="grdResult_lblDTBCN1_2">0.82</span>
+										</td><td align="center">
+											<span id="grdResult_lblDTBCN2_2"></span>
+										</td><td align="center">
+											<span id="grdResult_lblDTBC4N1_2">0</span>
+										</td><td align="center">
+											<span id="grdResult_lblDTBC4N2_2"></span>
+										</td><td align="center">
+											<span id="grdResult_lblSoTCN1_2">32</span>
+										</td><td align="center">
+											<span id="grdResult_lblSoTCN2_2"></span>
+										</td>
+	</tr><tr class="cssListAlternativeItem" style="height:20px;">
+		<td align="center">Toàn khóa</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">&nbsp;</td><td align="center">0</td><td align="center">&nbsp;</td><td align="center">
+											<span id="grdResult_lblDTBCN1_3">0.82</span>
+										</td><td align="center">
+											<span id="grdResult_lblDTBCN2_3"></span>
+										</td><td align="center">
+											<span id="grdResult_lblDTBC4N1_3">0</span>
+										</td><td align="center">
+											<span id="grdResult_lblDTBC4N2_3"></span>
+										</td><td align="center">
+											<span id="grdResult_lblSoTCN1_3">32</span>
+										</td><td align="center">
+											<span id="grdResult_lblSoTCN2_3"></span>
+										</td>
+	</tr>
+</tbody></table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="row">
+				<div class="col-md-12"><label class="form-control-lable-value">BẢNG ĐIỂM CHI TIẾT:</label></div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<table class="tableborder" id="tblMarkDetail" cellspacing="0" cellpadding="0" width="100%" border="0">
+						<tbody>
+							<tr>
+								<td class="tableborder" height="300" valign="top">
+									<div id="divData"><table id="tblStudentMark" cellpadding="0" cellspacing="0" border="0" style="width: 100%;">
+	<tbody><tr class="DataGridFixedHeader" height="20">
+		<td align="center" style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListHeader DataGridFixedColumn">STT</td>
+		<td align="center" style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListHeader DataGridFixedColumn">Mã học phần</td>
+		<td align="center" style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListHeader DataGridFixedColumn">Tên học phần</td>
+		<td align="center" style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListHeader DataGridFixedColumn">Số TC</td>
+		<td align="center" style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListHeader DataGridFixedColumn">Lần học</td>
+		<td align="center" style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListHeader">Lần thi</td>
+		<td align="center" style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListHeader">Điểm thứ</td>
+		<td align="center" style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListHeader">Là điểm tổng kết môn</td>
+		<td align="center" style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListHeader">Đánh giá</td>
+		<td align="center" style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListHeader">Giữa kỳ</td>
+		<td align="center" style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListHeader">Thường Xuyên</td>
+		<td align="center" style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListHeader">Thi</td>
+		<td align="center" style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListHeader">TKHP</td>
+		<td align="center" style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListHeader">Điểm chữ</td>
+	</tr>
+	<tr height="20">
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">ITA131</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">Ứng dụng công nghệ thông tin và AI</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">3</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">HOCLAI</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">0.0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">0.5</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">0.0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">0.2</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">F</td>
+	</tr>
+	<tr height="20">
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">2</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">PST131</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">Lý thuyết xác suất và thống kê</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">3</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">HOCLAI</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">0.0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">0.0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">0.0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">0.0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">F</td>
+	</tr>
+	<tr height="20">
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">3</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">YSKN131</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">Ý tưởng, sáng tạo và khởi nghiệp</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">3</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">HOCLAI</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">0.0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">0.0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">0.0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">0.0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">F</td>
+	</tr>
+	<tr height="20">
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">4</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">MAE231</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">Kinh tế học vĩ mô</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">3</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">HOCLAI</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">0.0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">1.0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">0.0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">0.3</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">F</td>
+	</tr>
+	<tr height="20">
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">5</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">PHE112</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">Giáo dục thể chất II</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">HOCLAI</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">&nbsp;</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">&nbsp;</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">0.0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">0.0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">F</td>
+	</tr>
+	<tr height="20">
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">6</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">ENG132</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">Tiếng Anh 2</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">3</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">HOCLAI</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">0.0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">0.0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">0.0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">0.0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">F</td>
+	</tr>
+	<tr height="20">
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">7</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">MLE121</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">Kinh tế chính trị Mác - Lênin</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">2</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">HOCLAI</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">0.0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">0.0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">0.0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">0.0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">F</td>
+	</tr>
+	<tr>
+		<td colspan="14" height="1" bgcolor="#003399"></td>
+	</tr>
+</tbody></table>
+</div>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			
+<script language="javascript">
+function addfav()
+   {
+   if (document.all)
+      {
+      window.external.AddFavorite
+      ("http://www.webdevelopersnotes.com","WebDevelopersNotes")
+      }
+   }
+
+</script>
+<div style="float:left;margin-top:60px;width:100%">
+<div id="footer_1" align="left">
+	<h4 id="hotline">Hot line<br>
+		<span id="PageFooter1_lblHotline"></span>
+	</h4>
+	<h4 style="FONT-SIZE:12px;right:11px;POSITION:absolute;TOP:20px">
+		<a id="PageFooter1_GoHome_ibnGoHome" href="javascript:__doPostBack(&#39;PageFooter1$GoHome$ibnGoHome&#39;,&#39;&#39;)" style="color:White;">Home page</a>
+
+		|
+		<a id="PageFooter1_SignOut_ibnLogout" href="javascript:__doPostBack(&#39;PageFooter1$SignOut$ibnLogout&#39;,&#39;&#39;)" style="color:White;">Exit</a>
+
+		| <a style="COLOR:white" href="http://dangkyhoc.tueba.edu.vn/dhkt/(S(ecfhhlnrfmw1cauogajk23tl))/support/default.aspx" target="_blank">Question and Answer</a>
+		| <a style="COLOR:white" href="http://dangkyhoc.tueba.edu.vn/CMCSoft.IU.Web.Info/WebHelp/NewProject1.htm" target="_blank">Help</a>
+	</h4>
+</div>
+<div id="footer_2"></div>
+<table align="center" bgcolor="white" style="PADDING-LEFT:5px;WIDTH:100%">
+	<tbody><tr>
+		<td align="right" width="533">
+			<span id="PageFooter1_lblEmail"><a href="http://dangkyhoc.tueba.edu.vn/dhkt/(S(ecfhhlnrfmw1cauogajk23tl))/StudentMark.aspx#" onclick="javascript:window.print()"><div style="FLOAT:left">	<img src="./__ Bảng điểm _._files/print.png" border="0"></div><div style="FLOAT:left;PADDING-TOP:6px">Print this page</div></a><a href="mailto:?subject=Information%20system%20IU&amp;body=http://dangkyhoc.tueba.edu.vn/dhkt/StudentMark.aspx"><div style="FLOAT:left"><img src="./__ Bảng điểm _._files/sendemail.png" border="0"></div><div style="FLOAT:left;PADDING-TOP:6px">Email this page</div></a><a href="http://dangkyhoc.tueba.edu.vn/dhkt/(S(ecfhhlnrfmw1cauogajk23tl))/StudentMark.aspx#" onclick="javascript:addfav()"><div style="FLOAT:left"><img src="./__ Bảng điểm _._files/addtofavorites.png" border="0"></div><div style="FLOAT:left;PADDING-TOP:6px">Add to favorites</div></a></span>
+		</td>
+		<td width="604">
+			<div style="FONT-WEIGHT:bold;FONT-SIZE:12px" align="left">
+				<span id="PageFooter1_lblCopyrightNotice"></span>
+				<span id="PageFooter1_lblLastUpdate"></span>
+				<span id="PageFooter1_lblVersion"></span>
+			</div>
+			
+		</td>
+		
+		<td align="right" width="410">
+			<p><a id="PageFooter1_hpUserOnlineList" href="http://dangkyhoc.tueba.edu.vn/dhkt/(S(ecfhhlnrfmw1cauogajk23tl))/UserOnlineList.aspx" target="_blank">People are online:</a>				
+				258
+			</p>
+			<p>Lượt truy cập:
+				4590719
+			</p>
+		</td>
+	</tr>
+</tbody></table>
+
+</div>
+</form>
+	
+
+</body><en2vi-host class="corom-element" version="3" style="all: initial; position: absolute; top: 0; left: 0; right: 0; height: 0; margin: 0; text-align: left; z-index: 10000000000; pointer-events: none; border: none; display: block"><template shadowrootmode="open"><style>@import "chrome-extension://gfgbmghkdjckppeomloefmbphdfmokgd/css/common.css";
+@import "chrome-extension://gfgbmghkdjckppeomloefmbphdfmokgd/css/style.css";</style><style id="svelte-1f4zgot">.toast-container.svelte-1f4zgot{position:fixed;pointer-events:none;width:0;height:0;display:flex;flex-direction:column-reverse;align-items:center;z-index:1000;bottom:0;padding:16px;gap:8px}.show.svelte-1f4zgot{width:100%;height:100%}</style>   <div class="toast-container svelte-1f4zgot"></div></template></en2vi-host><savior-host style="all: unset; position: absolute; top: 0; left: 0; z-index: 99999999999999; display: block !important; overflow: unset"><template shadowrootmode="open"><style>@import "chrome-extension://jdfkmiabjpfjacifcmihfdjhpnjpiick/css/content-script.css";
+</style><div class="body"><div class="turn-lights-overlay"></div><toasts id="toasts-container"></toasts></div></template></savior-host></html>
